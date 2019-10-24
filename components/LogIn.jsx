@@ -7,13 +7,14 @@ import Axios from "axios";
 const LogIn = props => {
     const { isLogged, setLogged } = props;
     const data = {
-        login: null,
-        password: null
+        login: '',
+        password: ''
     };
 
     const [authoriz, setAuthoriz] = useState(data);
 
     const changeHandler = e => {
+        const { name, value } = e.target;
         setAuthoriz( prevState => ({ ...prevState, [name]: value }));
     };
 

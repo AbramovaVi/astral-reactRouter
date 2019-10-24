@@ -1,12 +1,15 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import Axios from 'axios';
 
 const Secret = props => {
   const { isLogged, setLogged } = props;
 
   const logOut = e => {
       e.preventDefault();
-    setLogged(false);
+      Axios.post('/logout',{param: false})
+        .then(res => setLogged(res.data));
+    // setLogged(false);
   };
   return (
     (isLogged) ? (

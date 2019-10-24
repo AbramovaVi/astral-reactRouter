@@ -18,7 +18,10 @@ const SignUp = () => {
     const createUser = e => {
         e.preventDefault();
         Axios.post('/user', { param: userInfo })
-            .then(res => console.log(res));
+            .then(res => {
+                console.log(res);
+                alert('you signed up!')
+            });
     };
     return(
     <>

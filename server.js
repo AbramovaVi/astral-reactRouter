@@ -30,4 +30,10 @@ app.post('/auto', (req, res) => {
    res.send(permission);
 });
 
+app.post('/logout', (req, res) =>{
+  permission = req.body.param;
+
+  res.send(permission);
+});
+
 app.listen(4000, () => console.log('port 4000'));
