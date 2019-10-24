@@ -9,8 +9,9 @@ const Secret = props => {
       e.preventDefault();
       Axios.post('/logout',{param: false})
         .then(res => setLogged(res.data));
-    // setLogged(false);
   };
+
+  console.log(isLogged);
   return (
     (isLogged) ? (
         <>

@@ -2,7 +2,9 @@ header div {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: pink;
+    background-image: linear-gradient(to bottom left, rgb(209, 242, 255), rgb(213, 239, 253), rgb(217, 235, 251), rgb(222, 232, 250), rgb(226, 228, 248), rgb(230, 225, 246), rgb(234, 221, 244), rgb(238, 218, 242), rgb(242, 214, 240), rgb(247, 211, 239), rgb(251, 207, 237), rgb(255, 204, 235));
+    background-repeat: no-repeat;
+    /*background-color: pink;*/
     height: 50px;
 }
 
