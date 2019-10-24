@@ -1,0 +1,31 @@
+header div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: pink;
+    height: 50px;
+}
+
+h3 {
+    text-align: center;
+}
+
+form, span {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: darkmagenta;
+}
+
+.logout {
+    display: flex;
+    margin: auto;
+}
+

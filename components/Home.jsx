@@ -1,8 +1,15 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom';
 
-const Home = props => console.log('home props: ', props) || (
-    <h3>Home Page</h3>
-);
+const Home = props => {
+    const { isLogged } = props;
+    return (
+        <>
+          <h3>Home Page</h3>
+          { isLogged && <span>You have been authorized. Welcome</span> }
+          </>
+    )
+};
 
-export default withRouter(Home);
+export default Home;
+// export default withRouter(Home);
