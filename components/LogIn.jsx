@@ -23,6 +23,7 @@ const LogIn = props => {
       Axios.post('/auto', { param: authoriz })
         .then(res => setLogged(res.data));
     };
+    console.log('login',isLogged);
 
     return ( !isLogged ?
       <>

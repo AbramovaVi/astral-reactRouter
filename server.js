@@ -13,6 +13,11 @@ app.get('/*', (req, res) => {
     res.sendFile(join(__dirname, 'dist', 'index.html'));
 });
 
+app.post('/checking', (req, res) => {
+  // console.log(permission);
+  res.send(permission);
+});
+
 app.post('/user', (req, res) => {
     users.push(req.body.param);
     res.sendStatus(200);
@@ -35,5 +40,6 @@ app.post('/logout', (req, res) =>{
 
   res.send(permission);
 });
+
 
 app.listen(4000, () => console.log('port 4000'));

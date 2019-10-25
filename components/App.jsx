@@ -15,9 +15,17 @@ import Secret from './Secret';
 
 const App = () => {
     const [isLogged, setLogged] = useState(false);
-    console.log(isLogged);
+    // console.log('home',isLogged);
 
-return (
+  // const test = () =>
+    useEffect(()=> {
+    Axios.post('/checking',null)
+      .then( res => setLogged(res.data))
+      // .then(console.log('axios',isLogged));
+  },[]);
+
+
+  return (
 
     <BrowserRouter>
         <header>
@@ -35,9 +43,9 @@ return (
             </Route>
             <Route exact path="/signup" component={SignUp}/>
             <Route path="/login"
-                   render={props => <LogIn routerProps={props} setLogged={setLogged} isLogged={isLogged}/>}/>
+                   render={props => <LogIn routerProps={props} setLogged={setLogged} isLogged={isLogged} />}/>
             <Route path='/secret'
-                   render={props => <Secret routerProps={props} setLogged={setLogged} isLogged={isLogged}/>}/>
+                   render={props => <Secret routerProps={props} setLogged={setLogged} isLogged={isLogged} />}/>
         </Switch>
     </BrowserRouter>
 )};
